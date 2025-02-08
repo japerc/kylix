@@ -169,3 +169,11 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+# Custom
+kylix_fragments/archaic
+kylix_fragments/archaic/*
+kylix_fragments/classical
+kylix_fragments/classical/*
+.DS_Store
+MetObjects.csv
