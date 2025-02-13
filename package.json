@@ -1,6 +1,6 @@
 {
   "name": "kylix-app",
-  "private": true,
+  "private": false,
   "author": "Jakab Perczel",
   "version": "0.0.1",
   "type": "module",
