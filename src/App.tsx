@@ -1,6 +1,6 @@
-import UploadImageButton from "@/ImageUpload";
+import UploadImageButton from "@/components/ui/ImageUpload";
 import { useState } from "react";
-import SubmitImage from "./Submit";
+import SubmitImage from "./components/ui/Submit";
 
 function App() {
   const [image, setImage] = useState<string | null>(null);
