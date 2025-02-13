@@ -25,16 +25,16 @@ const UploadImageButton: React.FC<UploadImageButtonProps> = ({ image, setImage }
   };
 
   return (
-    <div className="w-[450px]">
-      <AspectRatio ratio={9 / 9} className="bg-muted mt-7 rounded-md">
+    <div className="w-[288px] transition-all duration-150 md:w-[366px]">
+      <AspectRatio ratio={9 / 9} className="bg-muted rounded-md ">
         {image ? (
           <div className="relative w-full h-full group">
             <img src={image} alt="Preview" className="w-full h-full object-cover rounded-md" />
             <Button
               onClick={handleRemoveImage}
-              variant="destructive"
+              variant="outline"
               size="icon"
-              className="absolute -top-2 -right-2 p-3 rounded-full opacity-0 group-hover:opacity-80 transition-opacity"
+              className="absolute -top-3 -right-3 p-3 rounded-full opacity-0 group-hover:opacity-80 transition-opacity"
             >
               <X className="h-2 w-2" />
             </Button>
