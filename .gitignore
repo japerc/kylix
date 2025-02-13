@@ -27,3 +27,4 @@ dist-ssr
 kylix_fragments
 kylix_fragments/*
 MetObjects.csv
+.vercel
