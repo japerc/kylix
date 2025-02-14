@@ -6,9 +6,9 @@ function App() {
   const [image, setImage] = useState<string | null>(null);
   return (
     <div >
-      <div className="fixed top-0 left-0 w-full h-16 z-10 border border-dashed bg-popover" >
-        <h1 className="text-left indent-4 min-w-96 text-popover-foreground ">Kylix Image Upload</h1>
-      </div>
+      <a className="fixed top-0 left-0 w-full h-16 z-10 border-b border-dashed bg-background" >
+        <h1 className="text-left indent-4 min-w-96 text-foreground ">Kylix Image Upload</h1>
+      </a>
       <div className="flex flex-col md:flex-row h-[1000px] border border-dashed bg-popover">
         <div className="pl-4 pr-4 pt-20 border-r border-dashed">
           <UploadImageButton image={image} setImage={setImage} />

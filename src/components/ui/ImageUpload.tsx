@@ -25,8 +25,8 @@ const UploadImageButton: React.FC<UploadImageButtonProps> = ({ image, setImage }
   };
 
   return (
-    <div className="w-[288px] transition-all duration-150 md:w-[366px]">
-      <AspectRatio ratio={9 / 9} className="bg-muted rounded-md ">
+    <div className="w-[288px] transition-all duration-150 md:w-[366px] text-center">
+      <AspectRatio ratio={9 / 9} className="bg-muted rounded-md items-center">
         {image ? (
           <div className="relative w-full h-full group">
             <img src={image} alt="Preview" className="w-full h-full object-cover rounded-md" />
@@ -40,7 +40,10 @@ const UploadImageButton: React.FC<UploadImageButtonProps> = ({ image, setImage }
             </Button>
           </div>
         ) : (
-          <span />
+
+          <div className="flex items-center text-muted-foreground bg-transparent h-full w-full">
+            <div className="w-full">Please upload and image</div>
+          </div>
         )}
       </AspectRatio>
       <Input
