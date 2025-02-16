@@ -2,7 +2,7 @@
 
 App to call Neural network for the classification of Kylix fragments as 'archaic' or 'classical'.
 
-This project was undertaken as an introduction to deep learning and React.
+I'm learning about deep learning and web development in React and I'm applying what I learn in this project.
 
 Training code is based on fast.ai's [Practical Deep Learning](https://course.fast.ai) course material.
 
