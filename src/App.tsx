@@ -13,8 +13,7 @@ function App() {
   const [predictionConfidence, setPredictionConfidence] = useState<number | null>(null);
 
   return (
-    <ThemeProvider defaultTheme="system" storageKey="vite-ui-theme">
-
+    <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
       <div className="flex flex-col h-screen w-screen bg-background">
         <Header />
         <div className="p-8 gap-8 flex flex-col md:flex-row justify-between items-start items-justify bg-background">
