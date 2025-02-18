@@ -88,8 +88,8 @@ button:focus-visible {
     --card-foreground: 12 6.5% 15.1%;
     --popover: 60 9.1% 97.8%;
     --popover-foreground: 12 6.5% 15.1%;
-    --primary: 221.2 83.2% 53.3%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 30 6.3% 25.1%;
+    --primary-foreground: 60 9.1% 97.8%;
     --secondary: 20 5.9% 90%;
     --secondary-foreground: 222.2 47.4% 11.2%;
     --muted: 20 5.9% 90%;
@@ -100,7 +100,7 @@ button:focus-visible {
     --destructive-foreground: 210 40% 98%;
     --border: 20 5.9% 90%;
     --input: 20 5.9% 90%;
-    --ring: 221.2 83.2% 53.3%;
+    --ring: 25 5.3% 44.7%;
     --radius: 0.5rem;
     --chart-1: 12 76% 61%;
     --chart-2: 173 58% 39%;

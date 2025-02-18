@@ -16,7 +16,7 @@ export default function AboutCard() {
         <CardDescription>Classifying ancient Greek cup fragments by period.</CardDescription>
       </CardHeader>
       <CardContent>
-        <Accordion type="single" collapsible className="w-full">
+        <Accordion type="single" collapsible className="w-full" defaultValue="item-1">
           <AccordionItem value="item-1" >
             <AccordionTrigger>Project Purpose</AccordionTrigger>
             <AccordionContent>
@@ -58,6 +58,6 @@ export default function AboutCard() {
           </AccordionItem>
         </Accordion>
       </CardContent>
-    </Card>
+    </Card >
   )
 }

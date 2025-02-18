@@ -5,6 +5,7 @@ import Header from "@/components/header-component";
 import ImageUploadSection from "@/components/image-upload-card";
 import PredictionResult from "@/components/prediction-result-card";
 import About from "@/components/about-card"
+import Examples from "./components/examples";
 
 function App() {
   const [image, setImage] = useState<string | null>(null);
@@ -26,11 +27,18 @@ function App() {
             setPredictionLabel={setPredictionLabel}
             setPredictionConfidence={setPredictionConfidence}
           />
-          <PredictionResult
-            predictionLabel={predictionLabel}
-            predictionConfidence={predictionConfidence}
-            destructCount={destructCount}
-          />
+          <div className="flex flex-col w-full md:w-1/3 shrink justify-between gap-8">
+            <Examples
+              setImage={setImage}
+              setPredictionLabel={setPredictionLabel}
+              setPredictionConfidence={setPredictionConfidence} />
+            <PredictionResult
+              predictionLabel={predictionLabel}
+              predictionConfidence={predictionConfidence}
+              destructCount={destructCount}
+            />
+          </div>
+
         </div>
       </div >
     </ThemeProvider>

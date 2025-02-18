@@ -33,7 +33,7 @@ const ImageUploadSection: React.FC<ImageUploadSectionProps> = ({
   };
 
   return (
-    <Card className="pt-6 w-full md:min-h-[445px] md:w-96">
+    <Card className="pt-6 w-full md:w-1/3">
       <CardContent>
         <ImageSocket
           image={image}
