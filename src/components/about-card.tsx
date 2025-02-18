@@ -10,7 +10,7 @@ import WikimediaApiRequest from "@/components/wikimedia-api-request"
 export default function AboutCard() {
   return (
 
-    <Card className="pt-6 w-full md:min-h-[445px] md:w-96">
+    <Card className="w-full md:min-h-[445px] md:w-96">
       <CardHeader>
         <CardTitle>About This Project</CardTitle>
         <CardDescription>Classifying ancient Greek cup fragments by period.</CardDescription>
