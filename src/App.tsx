@@ -5,7 +5,7 @@ import Header from "@/components/header-component";
 import ImageUploadSection from "@/components/image-upload-card";
 import PredictionResult from "@/components/prediction-result-card";
 import About from "@/components/about-card"
-import Examples from "./components/examples";
+import Examples from "@/components/examples";
 
 function App() {
   const [image, setImage] = useState<string | null>(null);
