@@ -18,7 +18,7 @@ export default function AboutCard() {
       <CardContent>
         <Accordion type="single" collapsible className="w-full" defaultValue="item-1">
           <AccordionItem value="item-1" >
-            <AccordionTrigger>Project Purpose</AccordionTrigger>
+            <AccordionTrigger className="bg-inherit">Project Purpose</AccordionTrigger>
             <AccordionContent>
               The Kylix Classifier helps users distinguish between Archaic and
               Classical kylix fragments. I chose this project because I found it
@@ -27,13 +27,13 @@ export default function AboutCard() {
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-2">
-            <AccordionTrigger>Kylix Wikipedia Entry</AccordionTrigger>
+            <AccordionTrigger className="bg-inherit">Kylix Wikipedia Entry</AccordionTrigger>
             <AccordionContent>
               <WikimediaApiRequest />
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-3">
-            <AccordionTrigger>Tech Stack and Architecture</AccordionTrigger>
+            <AccordionTrigger className="bg-inherit">Tech Stack and Architecture</AccordionTrigger>
             <AccordionContent>
               This app uses a React (Vite) frontend, with model inference hosted on Hugging Face Spaces
               using Gradio. The model is a fine-tuned ResNet-18 pretrained on ImageNet, achieving 78%
@@ -41,14 +41,14 @@ export default function AboutCard() {
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-4">
-            <AccordionTrigger>Dataset</AccordionTrigger>
+            <AccordionTrigger className="bg-inherit">Dataset</AccordionTrigger>
             <AccordionContent>
               The model was fine-tuned on public domain images of kylix fragments
               from The MET’s open access collection.
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-5">
-            <AccordionTrigger>Key Learnings</AccordionTrigger>
+            <AccordionTrigger className="bg-inherit">Key Learnings</AccordionTrigger>
             <AccordionContent>
               Through this project, I gained practical experience with fine-tuning pretrained models
               and deploying them using Hugging Face Spaces and Gradio. I also learned

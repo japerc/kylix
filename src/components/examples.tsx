@@ -28,24 +28,20 @@ const Examples: React.FC<ExampleProps> = ({ setImage, setPrediction }) => {
     <CardContent className="flex flex-row items-start justify-center gap-8">
       <TooltipProvider>
         <Tooltip>
-          <TooltipTrigger onClick={() => handleButtonClick(archaicExample)} className="flex w-2/5 h-fit p-0">
+          <TooltipTrigger onClick={() => handleButtonClick(archaicExample)} className="flex w-2/5 h-fit p-0 rounded-lg">
 
             <img src={archaicExample} alt="Example 1" className="w-full h-auto rounded-lg hover:ring active:border" />
 
           </TooltipTrigger>
-          <TooltipContent>
-            Archaic
-          </TooltipContent>
+          <TooltipContent>Archaic</TooltipContent>
         </Tooltip>
       </TooltipProvider>
       <TooltipProvider>
         <Tooltip>
-          <TooltipTrigger onClick={() => handleButtonClick(classicalExample)} className="flex w-2/5 h-fit p-0">
+          <TooltipTrigger onClick={() => handleButtonClick(classicalExample)} className="flex w-2/5 h-fit p-0 rounded-lg">
             <img src={classicalExample} alt="Example 2" className="w-full h-auto rounded-lg hover:ring active:border" />
           </TooltipTrigger>
-          <TooltipContent>
-            Classical
-          </TooltipContent>
+          <TooltipContent>Classical</TooltipContent>
         </Tooltip>
       </TooltipProvider>
     </CardContent >
