@@ -3,14 +3,12 @@ import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/com
 import { Skeleton } from "@/components/ui/skeleton"
 
 interface PredictionResultProps {
-  predictionLabel: string | null;
-  predictionConfidence: number | null;
+  prediction: [string, number] | null;
   destructCount: number;
 }
 
 const PredictionResult: React.FC<PredictionResultProps> = ({
-  predictionLabel,
-  predictionConfidence,
+  prediction,
   destructCount
 }) => {
 
@@ -21,8 +19,8 @@ const PredictionResult: React.FC<PredictionResultProps> = ({
         <CardDescription>Archaic or Classical</CardDescription>
       </CardHeader>
       <CardContent id={destructCount.toString()}>
-        {(predictionLabel && predictionConfidence) ?
-          <p><b>{predictionLabel.toUpperCase()}</b> <br /> Confidence {predictionConfidence * 100} %</p>
+        {(prediction) ?
+          <p><b>{prediction[0].toUpperCase()}</b> <br /> Confidence {prediction[1] * 100} %</p>
           : <div className='flex flex-col gap-2'>
             <Skeleton className="h-5 w-[90px]" />
             <Skeleton className="h-5 w-[130px]" />

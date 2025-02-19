@@ -14,8 +14,7 @@ interface ImageUploadSectionProps {
   setImage: React.Dispatch<React.SetStateAction<string | null>>;
   destructCount: number;
   setDestructCount: React.Dispatch<React.SetStateAction<number>>;
-  setPredictionLabel: React.Dispatch<React.SetStateAction<string | null>>;
-  setPredictionConfidence: React.Dispatch<React.SetStateAction<number | null>>;
+  setPrediction: React.Dispatch<React.SetStateAction<[string, number] | null>>;
 }
 
 const ImageUploadSection: React.FC<ImageUploadSectionProps> = ({
@@ -23,8 +22,7 @@ const ImageUploadSection: React.FC<ImageUploadSectionProps> = ({
   setImage,
   destructCount,
   setDestructCount,
-  setPredictionLabel,
-  setPredictionConfidence
+  setPrediction
 }) => {
   const imageInputRef = useRef<HTMLInputElement>(null);
 
@@ -40,15 +38,13 @@ const ImageUploadSection: React.FC<ImageUploadSectionProps> = ({
           setImage={setImage}
           destructCount={destructCount}
           setDestructCount={setDestructCount}
-          setPredictionLabel={setPredictionLabel}
-          setPredictionConfidence={setPredictionConfidence}
+          setPrediction={setPrediction}
         />
       </CardContent>
       <CardFooter className="flex justify-between">
         <InputImage
           setImage={setImage}
-          setPredictionLabel={setPredictionLabel}
-          setPredictionConfidence={setPredictionConfidence}
+          setPrediction={setPrediction}
           destructCount={destructCount}
           ref={imageInputRef}
           hidden={true}
@@ -59,8 +55,7 @@ const ImageUploadSection: React.FC<ImageUploadSectionProps> = ({
         <SubmitImage
           image={image}
           variant="outline"
-          setLabel={setPredictionLabel}
-          setConf={setPredictionConfidence}
+          setPrediction={setPrediction}
         />
       </CardFooter>
     </Card>
