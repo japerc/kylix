@@ -7,8 +7,7 @@ interface ImageSocketProps {
   setImage: React.Dispatch<React.SetStateAction<string | null>>;
   destructCount: number;
   setDestructCount: React.Dispatch<React.SetStateAction<number>>;
-  setPredictionLabel: React.Dispatch<React.SetStateAction<string | null>>;
-  setPredictionConfidence: React.Dispatch<React.SetStateAction<number | null>>;
+  setPrediction: React.Dispatch<React.SetStateAction<[string, number] | null>>;
 }
 
 const ImageSocket: React.FC<ImageSocketProps> = (
@@ -16,13 +15,11 @@ const ImageSocket: React.FC<ImageSocketProps> = (
     setImage,
     destructCount,
     setDestructCount,
-    setPredictionLabel,
-    setPredictionConfidence }) => {
+    setPrediction }) => {
 
   const handleRemoveImage = () => {
     setImage(null);
-    setPredictionLabel(null);
-    setPredictionConfidence(null);
+    setPrediction(null);
     setDestructCount(destructCount + 1);
   }
 

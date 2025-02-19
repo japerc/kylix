@@ -10,8 +10,7 @@ import Examples from "./components/examples";
 function App() {
   const [image, setImage] = useState<string | null>(null);
   const [destructCount, setDestructCount] = useState(0);
-  const [predictionLabel, setPredictionLabel] = useState<string | null>(null);
-  const [predictionConfidence, setPredictionConfidence] = useState<number | null>(null);
+  const [prediction, setPrediction] = useState<[string, number] | null>(null);
 
   return (
     <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
@@ -24,17 +23,14 @@ function App() {
             setImage={setImage}
             destructCount={destructCount}
             setDestructCount={setDestructCount}
-            setPredictionLabel={setPredictionLabel}
-            setPredictionConfidence={setPredictionConfidence}
+            setPrediction={setPrediction}
           />
           <div className="flex flex-col w-full md:w-1/3 shrink justify-between gap-8">
             <Examples
               setImage={setImage}
-              setPredictionLabel={setPredictionLabel}
-              setPredictionConfidence={setPredictionConfidence} />
+              setPrediction={setPrediction} />
             <PredictionResult
-              predictionLabel={predictionLabel}
-              predictionConfidence={predictionConfidence}
+              prediction={prediction}
               destructCount={destructCount}
             />
           </div>

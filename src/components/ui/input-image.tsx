@@ -3,8 +3,7 @@ import { Input } from "@/components/ui/input";
 
 interface InputImageProps {
   setImage: React.Dispatch<React.SetStateAction<string | null>>;
-  setPredictionLabel: React.Dispatch<React.SetStateAction<string | null>>;
-  setPredictionConfidence: React.Dispatch<React.SetStateAction<number | null>>;
+  setPrediction: React.Dispatch<React.SetStateAction<[string, number] | null>>;
   destructCount: number;
   ref: React.RefObject<HTMLInputElement | null>;
   hidden?: boolean;
@@ -13,8 +12,7 @@ interface InputImageProps {
 const InputImage = forwardRef<HTMLInputElement, InputImageProps>((
   {
     setImage,
-    setPredictionLabel,
-    setPredictionConfidence,
+    setPrediction,
     destructCount,
     hidden
   },
@@ -23,8 +21,7 @@ const InputImage = forwardRef<HTMLInputElement, InputImageProps>((
   const handleImageChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const files = event.target.files;
     if (files && files.length > 0) {
-      setPredictionLabel(null);
-      setPredictionConfidence(null);
+      setPrediction(null);
       setImage(URL.createObjectURL(files[0]));
     };
   };

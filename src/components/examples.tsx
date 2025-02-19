@@ -10,22 +10,14 @@ import {
 
 interface ExampleProps {
   setImage: React.Dispatch<React.SetStateAction<string | null>>;
-  setPredictionLabel: React.Dispatch<React.SetStateAction<string | null>>;
-  setPredictionConfidence: React.Dispatch<React.SetStateAction<number | null>>;
+  setPrediction: React.Dispatch<React.SetStateAction<[string, number] | null>>;
 }
 
-const Examples: React.FC<ExampleProps> = ({ setImage, setPredictionLabel, setPredictionConfidence }) => {
+const Examples: React.FC<ExampleProps> = ({ setImage, setPrediction }) => {
 
-  const handleArchaicButtonClick = () => {
-    setImage(archaicExample)
-    setPredictionLabel(null)
-    setPredictionConfidence(null)
-  }
-
-  const handleClassicalButtonClick = () => {
-    setImage(classicalExample)
-    setPredictionLabel(null)
-    setPredictionConfidence(null)
+  const handleButtonClick = (image: string) => {
+    setImage(image)
+    setPrediction(null)
   }
 
   return <Card className="w-full">
@@ -36,7 +28,7 @@ const Examples: React.FC<ExampleProps> = ({ setImage, setPredictionLabel, setPre
     <CardContent className="flex flex-row items-start justify-center gap-8">
       <TooltipProvider>
         <Tooltip>
-          <TooltipTrigger onClick={handleArchaicButtonClick} className="flex w-2/5 h-fit p-0">
+          <TooltipTrigger onClick={() => handleButtonClick(archaicExample)} className="flex w-2/5 h-fit p-0">
 
             <img src={archaicExample} alt="Example 1" className="w-full h-auto rounded-lg hover:ring active:border" />
 
@@ -48,7 +40,7 @@ const Examples: React.FC<ExampleProps> = ({ setImage, setPredictionLabel, setPre
       </TooltipProvider>
       <TooltipProvider>
         <Tooltip>
-          <TooltipTrigger onClick={handleClassicalButtonClick} className="flex w-2/5 h-fit p-0">
+          <TooltipTrigger onClick={() => handleButtonClick(classicalExample)} className="flex w-2/5 h-fit p-0">
             <img src={classicalExample} alt="Example 2" className="w-full h-auto rounded-lg hover:ring active:border" />
           </TooltipTrigger>
           <TooltipContent>

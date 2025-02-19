@@ -6,12 +6,11 @@ import { Crosshair } from "lucide-react";
 interface SubmitImageProps
   extends ButtonProps {
   image: null | string;
-  setLabel: React.Dispatch<React.SetStateAction<string | null>>;
-  setConf: React.Dispatch<React.SetStateAction<number | null>>;
+  setPrediction: React.Dispatch<React.SetStateAction<[string, number] | null>>
 }
 
 const SubmitImage: React.FC<SubmitImageProps> = (
-  { image, setLabel, setConf, ...props }) => {
+  { image, setPrediction, ...props }) => {
   const [waiting, setWaiting] = React.useState(false);
 
   const handleSubmit = async () => {
@@ -29,8 +28,7 @@ const SubmitImage: React.FC<SubmitImageProps> = (
         setWaiting(false);
         if (result.type === "data") {
           const data = result.data as { confidences: { label: string, confidence: number }[] }[];
-          setLabel(data[0].confidences[0].label)
-          setConf(Number(data[0].confidences[0].confidence.toFixed(2)))
+          setPrediction([data[0].confidences[0].label, Number(data[0].confidences[0].confidence.toFixed(2))])
         }
         else {
           console.log(result);
